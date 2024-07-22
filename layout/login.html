@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../images/icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/styles.css">
+    <script src="../scripts/main.js"></script>   
+    <link rel="stylesheet" href="../style/footer.css">
+    <script src="../scripts/form.js"></script>
+    
+</head>
+
+
+<body>
+
+    <header>
+       
+        <a href="../layout/index.html"><img src="../images/cat.png" alt="" class="homec"></a>
+        <div class="search">
+            <input type="text" id="search-input" onkeyup="handleSearch(event)" placeholder="Search">
+            
+        </div>
+        <h3>
+            <button id="theme-btn" class="themebtn light" onclick="toggleTheme()">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+            </button>
+        </h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <nav>
+            
+            <button onclick="showAlert()" class="map-button"><i class="fa fa-map-marker" aria-hidden="true" ></i></button>
+            <a href="#" class="wishlist-link">Wishlist <i class="fa fa-heart-o" aria-hidden="true"></i></a>
+            <select name="header-select" id="header-select">
+                <option value="support">Support center</option>
+                <option value="safety">Safety center</option>
+                <option value="chat">Chat with Blue</option>
+                <option value="purchase">Blue purchase protection</option>
+                <option value="privacy">Privacy & cookie policy</option>
+            </select>
+        </nav>
+        
+         
+    </header><br><br>
+
+    <div id="login-box">
+        <div class="left">
+            <h1>Sign up</h1>
+            <form id="signup-form">
+                <input type="text" id="username" name="username" placeholder="Username" oninput="validateForm()"/>
+                <p id="username-error"></p>
+                <input type="text" id="email" name="email" placeholder="E-mail" oninput="validateForm()"/>
+                <p id="email-error"></p>
+                <input type="password" id="password" name="password" placeholder="Password" oninput="validateForm()"/>
+                <p id="password-error"></p>
+                <input type="password" id="password2" name="password2" placeholder="Retype password" oninput="validateForm()"/>
+                <p id="password2-error"></p>
+                <input type="submit" id="signup-submit" name="signup_submit" value="Sign me up" disabled />
+            </form>
+        </div>
+        <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+            <button class="social-signin facebook"> <a href="https://www.facebook.com/login.php">Log in with Facebook</a></button>
+            <button class="social-signin twitter"><a href="https://x.com/i/flow/login">Log in with Twitter </a></button>
+            <button class="social-signin google"><a href="https://myaccount.google.com">Log in with Google+ </a></button>
+        </div>
+        <div class="or">OR</div>
+    </div>
+    
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/nazanin._.sardari/"><i class="fa fa-instagram"></i></a>
+  <a href="https://github.com/Bluenazi"><i class="fa fa-github" aria-hidden="true"></i></a>
+  <a href="https://web.telegram.org/k/#@BlueNazi"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+    </div>
+    
+    <div class="row">
+    <ul>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+        Copyright © 2024 Inferno - All rights reserved || Designed By: BlueNazi
+    </div>
+    </div>
+    </footer>
+</body>
+
+</html>

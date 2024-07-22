@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Store</title>
+     <script src="../scripts/main.js" defer></script>   
+     
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="icon" href="../images/icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="../layout/index.html"><img src="../images/cat.png" alt="" class="home"></a>
+        <div class="search">
+            <input type="text" id="search-input" onkeyup="handleSearch(event)" placeholder="Search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        
+            <button id="theme-btn" class="themebtn light" onclick="toggleTheme()">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+            </button>
+        
+        <div class="categories">
+            <select id="category-select" onchange="handleCategoryChange(event)">
+                <option value="all">All</option>
+            </select>
+        </div>
+        
+        <nav>
+            <a href="../layout/login.html" class="register-button">My Account<i class="fa fa-user" aria-hidden="true"></i></a>
+        </nav>
+        <div class="basketDiv">
+            <h3 onclick="renderBasket()">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i><span id="basket-count">0</span>
+                <span id="basket"></span><div id="basket-items" class="basket-items"></div>
+            </h3>
+        </div>
+    </header><br><br>
+    
+    <div class="slider" id="image-slider">
+        <div class="slide active skeleton" style="background-image: url('../images/1.png');"></div>
+        <div class="slide skeleton" style="background-image: url('../images/2.jpeg');"></div>
+        <div class="slide skeleton" style="background-image: url('../images/3.jpg');"></div>
+        <div class="slide skeleton" style="background-image: url('../images/4.jpg');"></div>
+        <div class="slide skeleton" style="background-image: url('../images/5.jpg');"></div>
+        <div class="nav-buttons">
+            <span class="prev" onclick="prevSlide()"><</span>
+            <span class="next" onclick="nextSlide()">></span>
+        </div>
+        <div class="dots">
+            <span class="dot active skeleton" onclick="currentSlide(0)"></span>
+            <span class="dot skeleton" onclick="currentSlide(1)"></span>
+            <span class="dot skeleton" onclick="currentSlide(2)"></span>
+        </div>
+    </div><br><br>
+    
+    <div class="container">
+        <div id="root" class="product-list">
+           
+            <div class="product card skeleton">
+                <img src="" alt="" class="card__header header__img skeleton">
+                <h2 class="card__header header__title">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </h2>
+                <p class="card__body body__text">
+                    <div class="skeleton skeleton-text skeleton-text__body"></div>
+                </p>
+                <img src="" alt="" class="card__body body__img skeleton">
+                <div class="card__footer skeleton skeleton-text skeleton-footer"></div>
+            </div>
+        </div>
+        <div id="pagination" class="pagination"></div>
+        <div id="per-page-container">
+            <label for="per-page">Products:</label>
+            <select id="per-page" onchange="handlePerPageChange(event)">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="all">All</option>
+            </select>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nazanin._.sardari/"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/Bluenazi"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://web.telegram.org/k/#@BlueNazi"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+            </div>
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                Copyright © 2024 Inferno - All rights reserved || Designed By: BlueNazi
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
